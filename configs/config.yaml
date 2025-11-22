@@ -1,0 +1,76 @@
+# Application Settings
+app:
+  name: "AWIS"
+  version: "1.0.0"
+  environment: "development"
+
+# API Settings
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+
+# Streamlit Settings
+streamlit:
+  port: 8501
+  theme: "dark"
+
+# Security
+security:
+  secret_key: "your-secret-key-change-this-in-production"
+  algorithm: "HS256"
+  access_token_expire_minutes: 30
+
+# Database (for future expansion)
+database:
+  url: "sqlite:///./awis.db"
+
+# ML Models
+models:
+  attrition:
+    path: "4_models/attrition/model.pkl"
+    scaler_path: "4_models/attrition/scaler.pkl"
+    threshold: 0.5
+  
+  forecast:
+    path: "4_models/forecast/model.pkl"
+    scaler_path: "4_models/forecast/scaler.pkl"
+    horizon: 12
+  
+  mobility:
+    path: "4_models/mobility/model.pkl"
+    graph_path: "4_models/mobility/graph.pkl"
+    dimensions: 128
+    walk_length: 80
+    num_walks: 10
+
+# RAG Settings
+rag:
+  embeddings:
+    model: "sentence-transformers/all-MiniLM-L6-v2"
+    device: "cpu"
+  
+  vectorstore:
+    type: "faiss"  # or "chroma"
+    path: "2_src/rag_index/vectorstore"
+  
+  retriever:
+    k: 3
+    search_type: "similarity"
+  
+  llm:
+    provider: "ollama"  # or "huggingface"
+    model: "llama2"  # or "mistral"
+    temperature: 0.7
+    max_tokens: 512
+
+# Data Generation
+data_generation:
+  num_employees: 1000
+  num_skills: 50
+  seed: 42
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

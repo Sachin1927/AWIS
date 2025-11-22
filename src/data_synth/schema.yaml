@@ -1,0 +1,123 @@
+employees:
+  count: 1000
+  fields:
+    employee_id:
+      type: "sequence"
+      prefix: "EMP"
+      start: 1000
+    
+    name:
+      type: "name"
+    
+    email:
+      type: "email"
+    
+    department:
+      type: "choice"
+      choices:
+        - "Engineering"
+        - "Data Science"
+        - "Product"
+        - "Sales"
+        - "Marketing"
+        - "HR"
+        - "Finance"
+        - "Operations"
+    
+    job_role:
+      type: "choice"
+      choices:
+        - "Software Engineer"
+        - "Data Scientist"
+        - "Product Manager"
+        - "Sales Representative"
+        - "Marketing Manager"
+        - "HR Manager"
+        - "Financial Analyst"
+        - "Operations Manager"
+    
+    age:
+      type: "integer"
+      min: 22
+      max: 65
+    
+    years_at_company:
+      type: "integer"
+      min: 0
+      max: 30
+    
+    monthly_income:
+      type: "integer"
+      min: 30000
+      max: 200000
+    
+    performance_rating:
+      type: "choice"
+      choices: [1, 2, 3, 4, 5]
+      weights: [0.05, 0.15, 0.40, 0.30, 0.10]
+    
+    satisfaction_level:
+      type: "float"
+      min: 0.0
+      max: 1.0
+    
+    last_promotion_years:
+      type: "integer"
+      min: 0
+      max: 10
+    
+    training_hours:
+      type: "integer"
+      min: 0
+      max: 100
+
+skills:
+  count: 50
+  categories:
+    Technical:
+      - "Python"
+      - "Java"
+      - "JavaScript"
+      - "SQL"
+      - "React"
+      - "Node.js"
+      - "Docker"
+      - "Kubernetes"
+      - "AWS"
+      - "Azure"
+      - "Machine Learning"
+      - "Deep Learning"
+      - "Data Analysis"
+      - "Git"
+      - "CI/CD"
+    
+    Business:
+      - "Project Management"
+      - "Agile"
+      - "Scrum"
+      - "Product Strategy"
+      - "Business Analysis"
+      - "Stakeholder Management"
+      - "Financial Modeling"
+      - "Market Research"
+    
+    Soft Skills:
+      - "Leadership"
+      - "Communication"
+      - "Team Collaboration"
+      - "Problem Solving"
+      - "Critical Thinking"
+      - "Creativity"
+      - "Time Management"
+      - "Adaptability"
+
+employee_skills:
+  skills_per_employee:
+    min: 3
+    max: 12
+  
+  proficiency_levels:
+    - "Beginner"
+    - "Intermediate"
+    - "Advanced"
+    - "Expert"

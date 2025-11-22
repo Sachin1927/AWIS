@@ -1,0 +1,42 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: awis_api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./4_models:/app/4_models
+      - ./src/rag_index/vectorstore:/app/src/rag_index/vectorstore
+    networks:
+      - awis_net
+    restart: always
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: awis_streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+    volumes:
+      - ./app:/app/app
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./src/rag_index/vectorstore:/app/src/rag_index/vectorstore
+    depends_on:
+      - api
+    networks:
+      - awis_net
+    restart: always
+
+networks:
+  awis_net:
+    driver: bridge

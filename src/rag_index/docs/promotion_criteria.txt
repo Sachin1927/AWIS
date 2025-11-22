@@ -1,0 +1,26 @@
+
+# Promotion Criteria
+
+## General Requirements
+- Minimum 12 months in current role
+- Meets or exceeds performance expectations
+- Demonstrates readiness for next level
+
+## Levels
+### Individual Contributor
+- IC1: Entry (0-2 years)
+- IC2: Intermediate (2-4 years)
+- IC3: Senior (4-7 years)
+- IC4: Staff (7-10 years)
+
+### Management
+- M1: Team Lead
+- M2: Manager
+- M3: Senior Manager
+- M4: Director
+
+## Process
+1. Self-nomination or manager recommendation
+2. Promotion packet preparation
+3. Peer review
+4. Committee review

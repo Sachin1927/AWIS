@@ -1,0 +1,32 @@
+skill_id,skill_name,category
+SKL001,Python,Technical
+SKL002,Java,Technical
+SKL003,JavaScript,Technical
+SKL004,SQL,Technical
+SKL005,React,Technical
+SKL006,Node.js,Technical
+SKL007,Docker,Technical
+SKL008,Kubernetes,Technical
+SKL009,AWS,Technical
+SKL010,Azure,Technical
+SKL011,Machine Learning,Technical
+SKL012,Deep Learning,Technical
+SKL013,Data Analysis,Technical
+SKL014,Git,Technical
+SKL015,CI/CD,Technical
+SKL016,Project Management,Business
+SKL017,Agile,Business
+SKL018,Scrum,Business
+SKL019,Product Strategy,Business
+SKL020,Business Analysis,Business
+SKL021,Stakeholder Management,Business
+SKL022,Financial Modeling,Business
+SKL023,Market Research,Business
+SKL024,Leadership,Soft Skills
+SKL025,Communication,Soft Skills
+SKL026,Team Collaboration,Soft Skills
+SKL027,Problem Solving,Soft Skills
+SKL028,Critical Thinking,Soft Skills
+SKL029,Creativity,Soft Skills
+SKL030,Time Management,Soft Skills
+SKL031,Adaptability,Soft Skills
